@@ -1,0 +1,51 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FapticService", "FapticService\FapticService.csproj", "{FBD188C9-B23A-46D4-AA34-E1267F97AF65}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FapticService.Business", "FapticService.Business\FapticService.Business.csproj", "{EAA5F354-165C-4CDC-82F8-1DC285F1A634}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FapticService.Common", "FapticService.Common\FapticService.Common.csproj", "{8F697B8E-4070-40CC-83EC-40C9322B5C47}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FapticService.API", "FapticService.API\FapticService.API.csproj", "{1D7ECD17-276E-455B-8F12-50715CF445BF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FapticService.Domain", "FapticService.Domain\FapticService.Domain.csproj", "{569ED56F-C86D-4145-A388-9B1A07D0EC0F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{2C46D5C1-91E0-4BF6-A0BF-753A408EBF7F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FapticService.EntityFramework", "FapticService.EntityFramework\FapticService.EntityFramework.csproj", "{8BD69EE5-3FD7-4F95-A705-DCEFED026E0F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FBD188C9-B23A-46D4-AA34-E1267F97AF65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FBD188C9-B23A-46D4-AA34-E1267F97AF65}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FBD188C9-B23A-46D4-AA34-E1267F97AF65}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FBD188C9-B23A-46D4-AA34-E1267F97AF65}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EAA5F354-165C-4CDC-82F8-1DC285F1A634}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EAA5F354-165C-4CDC-82F8-1DC285F1A634}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EAA5F354-165C-4CDC-82F8-1DC285F1A634}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EAA5F354-165C-4CDC-82F8-1DC285F1A634}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F697B8E-4070-40CC-83EC-40C9322B5C47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F697B8E-4070-40CC-83EC-40C9322B5C47}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F697B8E-4070-40CC-83EC-40C9322B5C47}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F697B8E-4070-40CC-83EC-40C9322B5C47}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D7ECD17-276E-455B-8F12-50715CF445BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D7ECD17-276E-455B-8F12-50715CF445BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D7ECD17-276E-455B-8F12-50715CF445BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D7ECD17-276E-455B-8F12-50715CF445BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{569ED56F-C86D-4145-A388-9B1A07D0EC0F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{569ED56F-C86D-4145-A388-9B1A07D0EC0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{569ED56F-C86D-4145-A388-9B1A07D0EC0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{569ED56F-C86D-4145-A388-9B1A07D0EC0F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8BD69EE5-3FD7-4F95-A705-DCEFED026E0F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8BD69EE5-3FD7-4F95-A705-DCEFED026E0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8BD69EE5-3FD7-4F95-A705-DCEFED026E0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8BD69EE5-3FD7-4F95-A705-DCEFED026E0F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{8BD69EE5-3FD7-4F95-A705-DCEFED026E0F} = {2C46D5C1-91E0-4BF6-A0BF-753A408EBF7F}
+	EndGlobalSection
+EndGlobal
