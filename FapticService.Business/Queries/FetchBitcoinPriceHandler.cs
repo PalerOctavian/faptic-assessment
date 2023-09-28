@@ -1,7 +1,6 @@
 using FapticService.API.V1.Requests;
 using FapticService.API.V1.Responses;
-using FapticService.Common.Extensions;
-using FapticService.Domain.Exceptions;
+using FapticService.Business.Contract;
 using FapticService.Domain.Services;
 using Microsoft.Extensions.Logging;
 
@@ -14,22 +13,22 @@ public class FetchBitcoinPriceHandler : BaseHandler<FetchBitcoinPriceRequest, Fe
 {
     private readonly ILogger<FetchBitcoinPriceHandler> logger;
     private readonly IBitcoinPriceService bitcoinPriceService;
-    private readonly ICurrencyService currencyService;
+    private readonly ITimeUtility timeUtility;
 
     public FetchBitcoinPriceHandler(
         ILogger<FetchBitcoinPriceHandler> logger,
         IBitcoinPriceService bitcoinPriceService,
-        ICurrencyService currencyService)
+        ITimeUtility timeUtility)
     {
         this.logger = logger;
         this.bitcoinPriceService = bitcoinPriceService;
-        this.currencyService = currencyService;
+        this.timeUtility = timeUtility;
     }
     
     public override async Task<FetchBitcoinPriceResponse> Handle(FetchBitcoinPriceRequest request, CancellationToken cancellationToken)
     {
         logger.LogInformation($"Handling Bitcoin price fetching for timestamp {request.UtcTime}");
-        var timestampWithPrecision = request.UtcTime!.Value.ToHourPrecision();
+        var timestampWithPrecision = timeUtility.ToHourPrecision(request.UtcTime!.Value);
 
         var result = await bitcoinPriceService.FetchAndAggregate(timestampWithPrecision, cancellationToken);
 

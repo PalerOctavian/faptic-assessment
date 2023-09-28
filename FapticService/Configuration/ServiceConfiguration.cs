@@ -1,3 +1,4 @@
+using FapticService.Business.Contract;
 using FapticService.Business.Services;
 using FapticService.Domain.Services;
 using FapticService.EntityFramework;
@@ -24,7 +25,7 @@ public static class ServiceConfiguration
         serviceCollection.AddEntityFramework(configuration);
 
         serviceCollection.AddTransient<IBitcoinPriceService, BitcoinPriceService>();
-        serviceCollection.AddTransient<ICurrencyService, CurrencyService>();
+        serviceCollection.AddSingleton<ITimeUtility, TimeUtility>();
 
         serviceCollection.AddBitcoinSources();
     }

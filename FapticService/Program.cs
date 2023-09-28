@@ -35,3 +35,6 @@ using (var scope = app.Services.CreateScope())
 }
 
 app.Run();
+
+// Trick to use Program class in endpoint testing
+public partial class Program { }

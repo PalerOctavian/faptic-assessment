@@ -14,6 +14,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastru
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FapticService.EntityFramework", "FapticService.EntityFramework\FapticService.EntityFramework.csproj", "{8BD69EE5-3FD7-4F95-A705-DCEFED026E0F}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Testing", "Testing", "{FC470B19-0092-4109-91D8-FD1F88A2E303}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FapticService.IntegrationTesting", "FapticService.IntegrationTesting\FapticService.IntegrationTesting.csproj", "{7DBA0A16-6027-49A2-91A1-610FE3A4497E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FapticService.UnitTesting", "FapticService.UnitTesting\FapticService.UnitTesting.csproj", "{DDD3A0A0-0233-422F-A30E-59DC3F4FDB99}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -44,8 +50,18 @@ Global
 		{8BD69EE5-3FD7-4F95-A705-DCEFED026E0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8BD69EE5-3FD7-4F95-A705-DCEFED026E0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8BD69EE5-3FD7-4F95-A705-DCEFED026E0F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7DBA0A16-6027-49A2-91A1-610FE3A4497E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7DBA0A16-6027-49A2-91A1-610FE3A4497E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7DBA0A16-6027-49A2-91A1-610FE3A4497E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7DBA0A16-6027-49A2-91A1-610FE3A4497E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DDD3A0A0-0233-422F-A30E-59DC3F4FDB99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DDD3A0A0-0233-422F-A30E-59DC3F4FDB99}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DDD3A0A0-0233-422F-A30E-59DC3F4FDB99}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DDD3A0A0-0233-422F-A30E-59DC3F4FDB99}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{8BD69EE5-3FD7-4F95-A705-DCEFED026E0F} = {2C46D5C1-91E0-4BF6-A0BF-753A408EBF7F}
+		{7DBA0A16-6027-49A2-91A1-610FE3A4497E} = {FC470B19-0092-4109-91D8-FD1F88A2E303}
+		{DDD3A0A0-0233-422F-A30E-59DC3F4FDB99} = {FC470B19-0092-4109-91D8-FD1F88A2E303}
 	EndGlobalSection
 EndGlobal

@@ -14,7 +14,9 @@ public class PricePointRepository : GenericRepository<PricePoint>, IPricePointRe
 
     public async Task<IEnumerable<PricePoint>> GetByTimestamps(DateTime startUtc, DateTime endUtc, CancellationToken cancellationToken = default)
     {
-        return await GetQueryable(entity => entity.Timestamp >= startUtc && entity.Timestamp <= endUtc).ToListAsync(cancellationToken);
+        return await GetQueryable(entity => 
+            entity.Timestamp >= DateTime.SpecifyKind(startUtc, DateTimeKind.Utc) && 
+            entity.Timestamp <= DateTime.SpecifyKind(endUtc, DateTimeKind.Utc)).ToListAsync(cancellationToken);
     }
 
     public Task<PricePoint?> GetByTimestamp(DateTime timestampUtc, CancellationToken cancellationToken = default)

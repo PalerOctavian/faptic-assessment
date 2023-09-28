@@ -15,7 +15,7 @@ public class GetBitcoinPriceTimeRangeHandler : BaseHandler<GetBitcoinPriceTimeRa
 
     public GetBitcoinPriceTimeRangeHandler(
         ILogger<GetBitcoinPriceTimeRangeHandler> logger,
-        IPricePointRepository pricePointRepository,
+        IPricePointReadOnlyRepository pricePointRepository,
         IMapper mapper)
     {
         this.logger = logger;
