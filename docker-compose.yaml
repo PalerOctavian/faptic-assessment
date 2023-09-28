@@ -1,0 +1,39 @@
+version: '3.8'
+services:
+  faptic-service:
+    image: faptic-service
+    build:
+      context: .
+      dockerfile: ./dockerfile
+    restart: on-failure
+    depends_on:
+      postgres-service:
+        condition: service_healthy
+    environment:
+      - DB_HOST=postgres-service
+      - DB_PORT=5432
+      - DB_USER=postgres
+      - DB_PASSWORD=postgres
+      - DB_NAME=faptic-service-db
+      - ASPNETCORE_ENVIRONMENT=development
+    ports:
+      - "5201:80"
+    
+  postgres-service:
+    image: postgres:latest
+    environment:
+      POSTGRES_DB: faptic-service-db
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5433:5432"
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -U postgres" ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:

@@ -8,12 +8,6 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <Content Include="..\.dockerignore">
-        <Link>.dockerignore</Link>
-      </Content>
-    </ItemGroup>
-
-    <ItemGroup>
       <PackageReference Include="ConfigurationSubstitutor" Version="1.5.1" />
       <PackageReference Include="FluentValidation" Version="11.7.1" />
       <PackageReference Include="FluentValidation.AspNetCore" Version="11.3.0" />
@@ -31,6 +25,15 @@
       <ProjectReference Include="..\FapticService.API\FapticService.API.csproj" />
       <ProjectReference Include="..\FapticService.Business\FapticService.Business.csproj" />
       <ProjectReference Include="..\FapticService.EntityFramework\FapticService.EntityFramework.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Content Include="..\docker-compose.yaml">
+        <Link>docker-compose.yaml</Link>
+      </Content>
+      <Content Include="..\dockerfile">
+        <Link>dockerfile</Link>
+      </Content>
     </ItemGroup>
 
 </Project>
